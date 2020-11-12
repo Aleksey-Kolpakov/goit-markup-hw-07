@@ -170,22 +170,12 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.link:hover .contacts-logo, .link:focus .contacts-logo {
+  fill: #2196f3;
+}
+
 .main-nav .logo {
   margin-right: 93px;
-}
-
-.site-nav .nav-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: #2196f3;
-}
-
-.link:hover .contacts-logo,
-.link:focus .contacts-logo {
-  fill: #2196f3;
 }
 
 .link {
@@ -196,6 +186,10 @@ header {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link:hover, .site-nav .link:focus {
+  color: #2196f3;
 }
 
 .header-contacts.link {
@@ -210,6 +204,10 @@ header {
 
 .nav-item {
   position: relative;
+}
+
+.site-nav .nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .active::after {
@@ -542,6 +540,10 @@ footer .logo {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-label:focus-within .form-logo {
+  fill: #2196f3;
+}
+
 .input-name {
   position: absolute;
   left: 0px;
@@ -642,18 +644,6 @@ footer .logo {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus {
-  outline-color: #2196f3;
-}
-
-.form-label:focus-within .form-logo {
-  fill: #2196f3;
-}
-
-.form-textarea:focus {
-  outline-color: #2196f3;
-}
-
 .checkbox-icon {
   margin-right: 9px;
   width: 16px;
@@ -738,8 +728,7 @@ footer .logo {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter-button:hover, .filter-button:focus {
   color: #ffffff;
   background-color: #2196f3;
   border-color: #2196f3;
@@ -778,13 +767,13 @@ footer .logo {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-card:hover .text-image {
+  transform: translateY(0%);
+}
+
 .is-hidden {
   opacity: 0;
   pointer-events: none;
-}
-
-.portfolio-card:hover .text-image {
-  transform: translateY(0%);
 }
 
 .portfolio-card {

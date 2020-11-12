@@ -13,7 +13,7 @@ header {
     display: flex;
     margin-left: auto;
   }
-  
+   
   .main-nav {
     display: flex;
     align-items: center;
@@ -40,26 +40,16 @@ header {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .link:hover &, .link:focus &{
+      fill: $focus-color;
+    }
   }
+
   
   .main-nav .logo {
     margin-right: 93px;
   }
   
-  
-  .site-nav .nav-item:not(:last-child) {
-    margin-right: 50px;
-  }
-  
-  .site-nav .link:hover,
-  .site-nav .link:focus {
-    color: $focus-color;
-  }
-  
-  .link:hover .contacts-logo,
-  .link:focus .contacts-logo {
-    fill: $focus-color;
-  }
   
   .link {
     color: $title-color;
@@ -69,6 +59,7 @@ header {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .site-nav &:hover, .site-nav &:focus{color: $focus-color;}
   }
   
   .header-contacts.link {
@@ -84,6 +75,10 @@ header {
   .nav-item {
     position: relative;
   }
+  .site-nav .nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
   
   .active::after {
     content: "";

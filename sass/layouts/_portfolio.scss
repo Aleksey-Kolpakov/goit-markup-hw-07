@@ -30,16 +30,15 @@
     transition-property: color, background-color, bordborder-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .filter-button:hover,
-  .filter-button:focus {
+  &:hover, &:focus{
     color: $background-color;
     background-color: $focus-color;
     border-color: $focus-color;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
+}
+  
   
   .portfolio-filter {
     display: flex;
@@ -71,17 +70,16 @@
     transform: translateY(100%);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    .portfolio-card:hover &{transform: translateY(0%);}
+}
+
   
   .is-hidden {
     opacity: 0;
     pointer-events: none;
   }
   
-  .portfolio-card:hover .text-image {
-    transform: translateY(0%);
-  }
-  
+   
   .portfolio-card {
     text-decoration: none;
     color: $main-text-color;
