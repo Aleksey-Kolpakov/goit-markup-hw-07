@@ -60,13 +60,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover .social-logo,
-.social-link:focus .social-logo {
-  fill: #ffffff;
-}
-
-.social-link:hover,
-.social-link:focus {
+.social-link:hover, .social-link:focus {
   background-color: #2196f3;
 }
 
@@ -77,6 +71,10 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover .social-logo, .social-link:hover .social-logo {
+  fill: #ffffff;
 }
 
 .section-title {
