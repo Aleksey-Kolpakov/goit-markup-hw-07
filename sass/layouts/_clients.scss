@@ -1,0 +1,37 @@
+/* Clients section */
+.clients-list {
+    display: flex;
+  }
+  
+  .client-item {
+    width: calc((100% - 30px * 5) / 6);
+  }
+  
+  .client-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .client-link {
+    padding: 20px;
+    text-align: center;
+    display: block;
+    height: 90px;
+    color: $grey-logo;
+    border: 1px solid $grey-logo;
+    border-radius: 4px;
+    transition-property: color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .client-link:hover,
+  .client-link:focus {
+    color: $focus-color;
+    border: 1px solid $focus-color;
+  }
+  
+  .client-logo {
+    fill: currentColor;
+    height: 100%;
+    width: 100%;
+  }
