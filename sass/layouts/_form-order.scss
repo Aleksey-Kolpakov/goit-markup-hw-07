@@ -87,7 +87,10 @@
     min-height: 40px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline-color: $focus-color;
   }
+}
   
   
   .form-textarea {
@@ -98,8 +101,16 @@
     resize: none;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus{outline-color: $focus-color;}
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
   }
+}
+//   textarea::placeholder {
+//     color: rgba(117, 117, 117, 0.5);
+//   }
   
+ 
   
   .checkbox-label {
     display: flex;
@@ -124,6 +135,7 @@
   .form-input:focus {
     outline-color: $focus-color;
   }
+ 
   
   .form-label:focus-within .form-logo {
     fill: $focus-color;
@@ -143,19 +155,24 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
-  }
-  
-  .form-checkbox:checked+.checkbox-icon {
-    background-image: url(../images/forms/SVG/Vector-5.svg);
+    .form-checkbox:checked+&{
+        background-image: url(../images/forms/SVG/Vector-5.svg);
     background-size: contain;
     border-color: transparent;
     background-color: $focus-color;
     background-origin: border-box;
-  }
+    }
+}
   
-  textarea::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-  }
+//   .form-checkbox:checked+.checkbox-icon {
+//     background-image: url(../images/forms/SVG/Vector-5.svg);
+//     background-size: contain;
+//     border-color: transparent;
+//     background-color: $focus-color;
+//     background-origin: border-box;
+//   }
+  
+   
   
   .form-button {
     color: $background-color;
@@ -175,7 +192,13 @@
     height: 11px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    .modal-button:hover &{
+        fill: $focus-color;
+    }
+}
+//   .modal-button:hover .close-logo {
+//     fill: $focus-color;
+//   }
   
   .modal-button {
     position: absolute;
@@ -187,6 +210,4 @@
     background-color: $background-color;
   }
   
-  .modal-button:hover .close-logo {
-    fill: $focus-color;
-  }
+ 

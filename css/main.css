@@ -426,8 +426,7 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-link:hover,
-.client-link:focus {
+.client-link:hover, .client-link:focus {
   color: #2196f3;
   border: 1px solid #2196f3;
 }
@@ -603,6 +602,10 @@ footer .logo {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:focus {
+  outline-color: #2196f3;
+}
+
 .form-textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -611,6 +614,14 @@ footer .logo {
   resize: none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus {
+  outline-color: #2196f3;
+}
+
+.form-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .checkbox-label {
@@ -661,10 +672,6 @@ footer .logo {
   background-origin: border-box;
 }
 
-textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
 .form-button {
   color: #ffffff;
   background-color: #2196f3;
@@ -685,6 +692,10 @@ textarea::placeholder {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-button:hover .close-logo {
+  fill: #2196f3;
+}
+
 .modal-button {
   position: absolute;
   padding: 10px;
@@ -693,10 +704,6 @@ textarea::placeholder {
   border: none;
   border-radius: 50%;
   background-color: #ffffff;
-}
-
-.modal-button:hover .close-logo {
-  fill: #2196f3;
 }
 
 /* portfolio styles */
